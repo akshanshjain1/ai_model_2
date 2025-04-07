@@ -14,6 +14,6 @@ async def detect_ai(input: InputText):
     ai_score = max(0, min(100, (100 - perplexity)))  # Simple mapping
     return {"ai_score": round(ai_score, 2), "perplexity": round(perplexity, 2)}
 
-@app.get("/")
+@app.get("/health")
 async def root():
     return {"status": "ok"}
